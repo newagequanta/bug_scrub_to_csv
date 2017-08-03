@@ -2,8 +2,9 @@
 The hook for BDB, BDB calls the task() function via GUI
 This will call create_csv in bug_scrub_to_csv module
 '''
-__copyright__ = "Copyright (c) 2017 Cisco Systems. All rights reserved."
 from . import code
+__copyright__ = "Copyright (c) 2017 Cisco Systems. All rights reserved."
+
 def task(Env, input_filename, output_filename):
     """
     Accepts a bug scrub from GDC (in unicode-8) and produces a CSV with relevant information 
