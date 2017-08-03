@@ -2,6 +2,7 @@
 The hook for BDB, BDB calls the task() function via GUI
 This will call create_csv in bug_scrub_to_csv module
 '''
+#code.py is the file with all the main functions
 from . import code
 __copyright__ = "Copyright (c) 2017 Cisco Systems. All rights reserved."
 
@@ -15,5 +16,8 @@ def task(Env, input_filename, output_filename):
     https://scripts.cisco.com/ui/browse/used/0/bdblib_
 
     """
+    
+    #create_csv is the function inside code that accepts filenames and starts
+    #procss
     code.create_csv(input_filename, output_filename)
     return 'Task Finished, download file from your files'
