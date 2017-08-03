@@ -1,12 +1,28 @@
 {
   "name": "bug_scrub_to_csv",
   "main": "__init__.py",
-  "inputs": [],
+  "inputs": [
+    {
+      "description": "Unicode-8 Text File of GDC Bug Scrub",
+      "optional": false,
+      "value": null,
+      "type": "inputFile",
+      "name": "input_file"
+    },
+    {
+      "description": "Name of the Output CSV (Should End in .csv)",
+      "optional": true,
+      "value": "output.csv",
+      "type": "text",
+      "name": "output_file"
+    }
+  ],
   "author": "nimbhasi",
+  "description": "",
   "entitlements": [],
   "groups": [],
   "contributors": [],
-  "minutes_saved": 0,
+  "minutes_saved": null,
   "labels": [],
   "service": "python3",
   "timeOut": 60000
