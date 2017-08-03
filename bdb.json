@@ -1,0 +1,13 @@
+{
+  "name": "bug_scrub_to_csv",
+  "main": "__init__.py",
+  "inputs": [],
+  "author": "nimbhasi",
+  "entitlements": [],
+  "groups": [],
+  "contributors": [],
+  "minutes_saved": 0,
+  "labels": [],
+  "service": "python3",
+  "timeOut": 60000
+}
