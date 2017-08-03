@@ -1,8 +1,12 @@
+'''
+The hook for BDB, BDB calls the task() function via GUI
+This will call create_csv in bug_scrub_to_csv module
+'''
 __copyright__ = "Copyright (c) 2017 Cisco Systems. All rights reserved."
-
-def task(env):
+from . import code
+def task(Env, input_filename, output_filename):
     """
-    Replace this docstring with your documentation. 
+    Accepts a bug scrub from GDC (in unicode-8) and produces a CSV with relevant information 
     
     This task is run by the bdblib library, full doc and examples at: 
     https://scripts.cisco.com/doc/
@@ -10,5 +14,5 @@ def task(env):
     https://scripts.cisco.com/ui/browse/used/0/bdblib_
 
     """
-    return 'something useful here'
-    
+    code.create_csv(input_filename, output_filename)
+    return 'Task Finished, download file from your files'
