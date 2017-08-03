@@ -5,5 +5,5 @@ For more info see: http://pytest.org/latest/
 """
 
 import task_bug_scrub_to_csv
-def test_example():
+def test_task():
     assert True == True
