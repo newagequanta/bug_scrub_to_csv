@@ -7,7 +7,7 @@
       "type": "inputFile",
       "value": null,
       "optional": false,
-      "description": "Unicode-8 Text File of GDC Bug Scrub"
+      "description": "Docx File of the GDC PSRR (Bug Scrub)"
     },
     {
       "name": "output_filename",
