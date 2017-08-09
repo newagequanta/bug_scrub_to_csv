@@ -25,7 +25,10 @@
   "groups": [],
   "contributors": [],
   "minutes_saved": 60,
-  "labels": [],
+  "labels": [
+    ":Bugs",
+    ":Software_Operations_Risk_Assessment"
+  ],
   "service": "python3",
   "timeOut": 120000
 }
