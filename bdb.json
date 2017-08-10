@@ -3,18 +3,18 @@
   "main": "__init__.py",
   "inputs": [
     {
-      "name": "input_filename",
-      "type": "inputFile",
-      "value": null,
+      "description": "Docx File of the GDC PSRR (Bug Scrub)",
       "optional": false,
-      "description": "Docx File of the GDC PSRR (Bug Scrub)"
+      "value": null,
+      "type": "inputFile",
+      "name": "input_filename"
     },
     {
-      "name": "output_filename",
-      "type": "text",
-      "value": "output.csv",
+      "description": "Name of the Output CSV (Should End in .csv)",
       "optional": true,
-      "description": "Name of the Output CSV (Should End in .csv)"
+      "value": "output.csv",
+      "type": "text",
+      "name": "output_filename"
     }
   ],
   "author": "nimbhasi",
@@ -27,7 +27,9 @@
   "minutes_saved": 90,
   "labels": [
     ":Bugs",
-    ":Software_Operations_Risk_Assessment"
+    ":Software_Operations_Risk_Assessment",
+    ":Python",
+    ":Parser"
   ],
   "service": "python3",
   "timeOut": 120000
