@@ -12,10 +12,10 @@ sys.path = ['', '/venv/python361-1/lib/python36.zip', '/venv/python361-1/lib/pyt
 
 def test_task():
     try:
-        task_bug_scrub_to_csv.task(None,
+        assert task_bug_scrub_to_csv.task(None,
                                '/var/bdb/sessions/sandboxed-user/test.doc',
-                               '/var/bdb/sessions/sandboxed-user/tests/bug_scrub_to_csv/output.csv')
-        assert True
+                               '/var/bdb/sessions/sandboxed-user/tests/bug_scrub_to_csv/output.csv') == True
+        
     except AttributeError:
         assert True
     except:
