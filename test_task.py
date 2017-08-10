@@ -6,7 +6,12 @@ For more info see: http://pytest.org/latest/
 
 import task_bug_scrub_to_csv
 def test_task():
-    task_bug_scrub_to_csv.task(None,
+    try:
+        task_bug_scrub_to_csv.task(None,
                                '/var/bdb/sessions/sandboxed-user/test.doc',
                                '/var/bdb/sessions/sandboxed-user/tests/bug_scrub_to_csv/output.csv')
-    assert AttributeError
+        assert True
+    except AttributeError:
+        assert True
+    except:
+        assert False
