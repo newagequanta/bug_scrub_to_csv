@@ -8,5 +8,5 @@ import task_bug_scrub_to_csv
 def test_task():
     task_bug_scrub_to_csv.task(None,
                                '/var/bdb/sessions/sandboxed-user/test.doc',
-                               'result.csv')
+                               '/var/bdb/sessions/sandboxed-user/output.csv')
     assert True == True
