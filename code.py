@@ -63,16 +63,29 @@ def create_csv_from_doc(input_filename, output_filename):
                                         table.cell(0, 1).text.replace('\n', ''))
             capps_url = '{}{}")'.format(url_prefix[1],
                                         table.cell(0, 1).text.replace('\n', ''))
+            #Appending Bug ID, text only,  to the record
             current_record.append(table.cell(0, 1).text.replace('\n', ''))
+
+            #Appending AS Severity to the record
             current_record.append(table.cell(0, 3).text[13:])
-            current_record.append(table.cell(1, 2).text)
+
+            #Searching for the Headline and appending to the list
+            for row in table.rows:
+                if 'Headline' in row.cells[0].text:
+                    current_record.append(row.cells[1].text)
+                    break
+            #Appending the two URLs to the record
             current_record.extend([cdets_url, capps_url])
 
             #Gather integerated-releases from BORGv3_bug_api
             current_record.append(bug_details(current_record[0]))
+
+            #Appending the record to the CSV list
             all_records.append(current_record)
 
     output_file = csv.writer(open(output_filename, 'w'), delimiter=',',
                              quoting=csv.QUOTE_ALL)
+
+    #Createing the CSV
     for record in all_records:
         output_file.writerow(record)
